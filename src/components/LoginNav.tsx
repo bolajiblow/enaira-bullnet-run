@@ -19,7 +19,7 @@ import { useState } from "react";
 import logo from "../../public/assets/enaira.svg";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/navigation";
-const Navbar = () => {
+const LoginNav = () => {
   const router = useRouter();
   let [display, changeDisplay] = useState("none");
   return (
@@ -40,7 +40,7 @@ const Navbar = () => {
             bg="#FFFFFF"
             direction="row"
             alignItems="center"
-            justifyContent="space-between"
+            justifyContent="space-around"
           >
             
               <Link as="span">
@@ -80,15 +80,12 @@ const Navbar = () => {
                   <MenuItem>Help </MenuItem>
                 </MenuList>
               </Menu>
-            </HStack>
-            <HStack>
-              <Button onClick={() => {router.push('auth/login')}} variant={"outline"} colorScheme="green" size="sm">
+              <Button onClick={() => {router.push('auth/login3')}}  color={"white"}
+                    bg={"#16780D"} px='20px' size="sm">
                 Login
               </Button>
-              <Button color={"white"} bg={"#16780D"} size="sm">
-                Fund wallet
-              </Button>
             </HStack>
+            
           </Flex>
         </Box>
       </Box>
@@ -169,4 +166,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default LoginNav;

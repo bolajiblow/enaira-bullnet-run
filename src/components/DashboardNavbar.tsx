@@ -12,12 +12,14 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Avatar,
 } from "@chakra-ui/react";
 import { MdClose, MdEmail, MdMenu, MdOndemandVideo } from "react-icons/md";
 import Image from "next/image";
 import { useState } from "react";
 import logo from "../../public/assets/enaira.svg";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import { BsBell } from "react-icons/bs";
 const DashboardNavbar = () => {
   let [display, changeDisplay] = useState("none");
   return (
@@ -68,7 +70,12 @@ const DashboardNavbar = () => {
                 Blog & News
               </Link>
               <Menu>
-                <MenuButton size={'sm'} bg={'white'} as={Button} rightIcon={<ChevronDownIcon />}>
+                <MenuButton
+                  size={"sm"}
+                  bg={"white"}
+                  as={Button}
+                  rightIcon={<ChevronDownIcon />}
+                >
                   Help
                 </MenuButton>
                 <MenuList>
@@ -80,13 +87,16 @@ const DashboardNavbar = () => {
                 </MenuList>
               </Menu>
             </HStack>
-            <HStack>
-              <Button variant={"outline"} colorScheme="green" size="sm">
-                Login
-              </Button>
-              <Button color={"white"} bg={"#16780D"} size="sm">
-                Fund wallet
-              </Button>
+            <HStack spacing={6} pr={10}>
+              <IconButton
+                variant="ghost"
+                aria-label="bell"
+                color="brand.2"
+                borderRadius={20}
+                icon={<BsBell />}
+              />
+
+              <Avatar size="sm" name={`Joshua Ndukwe`} />
             </HStack>
           </Flex>
         </Box>

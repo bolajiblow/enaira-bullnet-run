@@ -23,6 +23,8 @@ import { ArrowForwardIcon } from "@chakra-ui/icons";
 import KeyFeatures from "@/components/KeyFeatures";
 import WhyNaira from "@/components/WhyNaira";
 import BecomeAgent from "@/components/BecomeAgent";
+import DownloadApp from "@/components/DownloadApp";
+import Faq from "@/components/Faq";
 export default function Home() {
   return (
     <>
@@ -180,6 +182,8 @@ export default function Home() {
 
         <WhyNaira />
         <BecomeAgent />
+        <DownloadApp />
+        <Faq />
       
         <Box width="100%">
           <Image src={download} alt="download" />

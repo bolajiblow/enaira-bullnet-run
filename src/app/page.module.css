@@ -1,0 +1,27 @@
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+   
+  }
+  .image2 {
+    position: absolute;
+    bottom: 20px;
+    left: 80px;
+   
+  }
+ .background {
+  background-image: url('../../public/assets/background1.png');
+  background-size: cover;
+ }
+ .background_signup {
+  background-image: url('../../public/assets/login1.png');
+  background-size: cover;
+  width: 45%;
+  height: 100vh;
+ }

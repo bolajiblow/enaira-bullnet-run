@@ -1,59 +1,63 @@
 import { Box, Button, Center, Flex, HStack, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import agent from "../../public/assets/agent.png";
+import ellipse from "../../public/assets/ellipse.svg";
+import phone from "../../public/assets/phone2.png";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { BsApple, BsGooglePlay } from "react-icons/bs";
+import styles from '../app/page.module.css';
 
 const DownloadApp = () => {
   return (
-  <>
-    <Flex
-          flexDirection={["column", "column", "row", "row"]}
-          alignItems={"center"}
-          pr={["20px", "20px", "150px", "200px"]}
-          justifyContent={"space-between"}
-          pl={["20px", "20px", "68px", "68px"]}
-          py={["20px", "20px", "50px", "50px"]}
-          bg={"#3F4951"}
-        >
-          <Box>
-            <Flex
-              fontSize={["30px", "30px", "40px", "45px"]}
-              fontWeight={"800"}
-            >
-              <Text color={"white"} mr="5px">
-                Introducing
-              </Text>
-              <Text color={"#16780D"}>eNaira</Text>
-            </Flex>
-            <Text
-              color={"white"}
-              fontSize={["30px", "30px", "40px", "45px"]}
-              fontWeight={"800"}
-            >
-              The Future Digital Currency
+    <>
+      <Flex
+        flexDirection={["column", "column", "row", "row"]}
+        alignItems={"center"}
+        px={["10px", "10px", "50px", "50px"]}
+        justifyContent={"space-between"}
+        py={["20px", "20px", "60px", "70px"]}
+        bg={"white"}
+      >
+        <Box>
+          <Box mb="10px" maxW={"510px"}>
+            <Text fontSize={"36px"} fontWeight={"700"} color={"#3F4951"}>
+              Download Our Mobile App And Start Enjoying Smooth And Easy
+              Transactions
             </Text>
-            <Text
-              color={"#CCC6C6"}
-              mb={["25px", "30px", "40px", "45px"]}
-              fontSize={["14px", "14px", "16px", "16px"]}
-              fontWeight={"400"}
-            >
-              Experience instant, secure, and borderless transactions with our{" "}
-              <br></br> digital naira solution.
+          </Box>
+          <Box mb={"40px"} maxW={"510px"}>
+            <Text fontSize={"15px"} fontWeight={"400"} color={"#3F4951"}>
+              Get our mobile on playstore or apple store and start enjoying
+              smooth eNaira transactions
             </Text>
+          </Box>
+          <Flex>
             <Button
-              color={"white"}
-              bg={"#16780D"}
-             
+              mr={"20px"}
+              colorScheme="green"
+              variant={'outline'}
+              leftIcon={<BsGooglePlay />}
             >
-              Get Started
+              Download on Google Playstore
             </Button>
+            <Button  color={"white"}
+              bg={"#16780D"}  rightIcon={<BsApple />}>
+              Download on Apple Store
+            </Button>
+          </Flex>
+        </Box>
+        <Box   display={["none", "none", "block", "block"]} mt={["20px", "20px", "0px", "0px"]}>
+          <Box  className={styles.parent} >
+            <Box className={styles.image1}>
+              <Image src={ellipse} alt="phone" />
+            </Box>
+            <Box >
+              <Image  className={styles.image2} src={phone} alt="phone" />
+            </Box>
           </Box>
-          <Box mt={["20px", "20px", "0px", "0px"]}>
-            <Image src={agent} alt="phone" />
-          </Box>
-        </Flex>
-  </>
-  )
-}
+        </Box>
+      </Flex>
+    </>
+  );
+};
 
-export default DownloadApp
+export default DownloadApp;
