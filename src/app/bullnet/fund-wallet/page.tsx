@@ -236,8 +236,8 @@ const FundWallet = () => {
                     </FormControl>
                   </HStack>
                 </Box>
-                <Flex justifyContent={"space-between"}>
-                  <Button color={"white"} bg={"#16780D"} px="20px" size="sm">
+                <Flex py={'80px'} justifyContent={"center"}>
+                  <Button color={"white"} bg={"#16780D"}  size="md">
                     Pay N123,454
                   </Button>
                 </Flex>
