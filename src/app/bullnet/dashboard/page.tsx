@@ -492,6 +492,7 @@ const Dashboard = () => {
                   pr={"40px"}
                   pt="30px"
                   pb={"30px"}
+                  bg={'white'}
                   borderRadius={"12px"}
                   width={'60%'}
                   boxShadow={"-1px 0px 10px 2px rgba(0, 0, 0, 0.25)"}
@@ -603,6 +604,7 @@ const Dashboard = () => {
                   pb={"30px"}
                   borderRadius={"12px"}
                   width={'35%'}
+                  bg={'white'}
                   boxShadow={"-1px 0px 10px 2px rgba(0, 0, 0, 0.25)"}></Box>
               </Flex>
             </Box>
