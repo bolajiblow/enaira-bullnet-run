@@ -1,13 +1,14 @@
 import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/assets/img/logo2.svg";
+import logo from "../../../public/assets/enaira.svg";
 import { RiDashboardFill, RiUserSettingsLine } from "react-icons/ri";
-import { BiUser } from "react-icons/bi";
+import { BiNotepad, BiUser } from "react-icons/bi";
 import { GrUserWorker } from "react-icons/gr";
 import { MdWorkOutline } from "react-icons/md";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { BsWallet } from "react-icons/bs";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -21,7 +22,6 @@ const Sidebar = () => {
       height={"100%"}
       lineHeight={"100%"}
       pt={4}
-      boxShadow="base"
       bg="white"
       position="fixed"
       px={0}
@@ -34,80 +34,69 @@ const Sidebar = () => {
 
       <Flex direction="column" fontSize="16px" pt={8}>
         <HStack
-          mb={5}
+          mb={4}
+          mx={"10px"}
           py={4}
-          bg={pathname == "/bullnet/dashboard" ? "#F5F8FF" : "white"}
-          color={pathname == "/bullnet/dashboard" ? "#0047CC" : "#9E9E9E"}
-          borderLeftColor={pathname == "/bullnet/dashboard" ? "#0047CC" : "white"}
-          borderLeftWidth="4px"
+          color={pathname == "/bullnet/dashboard" ? "#16780D" : "#9E9E9E"}
+          boxShadow={pathname == "/bullnet/dashboard" ? "2px 2px 4px 1px rgba(0, 0, 0, 0.25)" : "none"}
           alignItems="center"
-          pl={9}
+          pl={6}
         >
           <RiDashboardFill size={18} />
-          <Link href="/bullnet/dashboard">
-            <a>Dashboard</a>
-          </Link>
+          <Link href="/bullnet/dashboard">Dashboard</Link>
         </HStack>
         <HStack
-          mb={5}
+          mb={4}
+          mx={"10px"}
           py={4}
-          bg={pathname == "/bullnet/user-profile" ? "#F5F8FF" : "white"}
-          color={pathname == "/bullnet/user-profile" ? "#0047CC" : "#9E9E9E"}
-          borderLeftColor={pathname == "/bullnet/user-profile" ? "#0047CC" : "white"}
-          borderLeftWidth="4px"
+          color={pathname == "/bullnet/user-profile" ? "#16780D" : "#9E9E9E"}
+          boxShadow={pathname == "/bullnet/user-profile" ? "2px 2px 4px 1px rgba(0, 0, 0, 0.25)" : "none"}
           alignItems="center"
-          pl={9}
+          pl={6}
         >
           <BiUser size={18} />
-          <Link href="/bullnet/user-profile">
-            <a>User profile</a>
-          </Link>
+          <Link href="/bullnet/user-profile">User profile</Link>
         </HStack>
         <HStack
-          mb={5}
+          mb={4}
+          mx={"10px"}
           py={4}
-          bg={pathname == "/bullnet/fund-wallet" ? "#F5F8FF" : "white"}
-          color={pathname == "/bullnet/fund-wallet" ? "#0047CC" : "#9E9E9E"}
-          borderLeftColor={pathname == "/bullnet/fund-wallet" ? "#0047CC" : "white"}
-          borderLeftWidth="4px"
+          color={pathname == "/bullnet/fund-wallet" ? "#16780D" : "#9E9E9E"}
+          boxShadow={pathname == "/bullnet/fund-wallet" ? "2px 2px 4px 1px rgba(0, 0, 0, 0.25)" : "none"}
           alignItems="center"
-          pl={9}
+          pl={6}
         >
-          <GrUserWorker size={18} />
-          <Link href="/bullnet/fund-wallet">
-            <a>Fund wallet</a>
-          </Link>
+          <BsWallet size={18} />
+          <Link href="/bullnet/fund-wallet">Fund wallet</Link>
         </HStack>
         <HStack
-          mb={5}
+          mb={4}
+          mx={"10px"}
           py={4}
-          bg={pathname == "/bullnet/transfer-funds" ? "#F5F8FF" : "white"}
-          color={pathname == "/bullnet/transfer-funds" ? "#0047CC" : "#9E9E9E"}
-          borderLeftColor={pathname == "/bullnet/transfer-funds" ? "#0047CC" : "white"}
-          borderLeftWidth="4px"
+          color={pathname == "/bullnet/transfer-funds" ? "#16780D" : "#9E9E9E"}
+          boxShadow={pathname == "/bullnet/transfer-funds" ? "2px 2px 4px 1px rgba(0, 0, 0, 0.25)" : "none"}
           alignItems="center"
-          pl={9}
+          pl={6}
         >
           <MdWorkOutline size={18} />
-          <Link href="/bullnet/transfer-funds">
-            <a>Transfer funds</a>
-          </Link>
+          <Link href="/bullnet/transfer-funds">Transfer funds</Link>
         </HStack>
 
         <HStack
-          mb={5}
+          mb={4}
+          mx={"10px"}
           py={4}
-          bg={pathname == "/bullnet/transaction-history" ? "#F5F8FF" : "white"}
-          color={pathname == "/bullnet/transaction-history" ? "#0047CC" : "#9E9E9E"}
-          borderLeftColor={pathname == "/bullnet/transaction-history" ? "#0047CC" : "white"}
-          borderLeftWidth="4px"
+          color={
+            pathname == "/bullnet/transaction-history" ? "#16780D" : "#9E9E9E"
+          }
+          boxShadow={
+            pathname == "/bullnet/transaction-history" ? "2px 2px 4px 1px rgba(0, 0, 0, 0.25)" : "none"
+          }
           alignItems="center"
-          pl={9}
+          pl={6}
         >
-          <RiUserSettingsLine size={18} />
-          <Link href="/bullnet/transaction-history">
-            <a>Transaction History</a>
-          </Link>
+          <BiNotepad size={18} />
+          <Link href="/bullnet/transaction-history">Transaction History</Link>
         </HStack>
       </Flex>
     </Container>

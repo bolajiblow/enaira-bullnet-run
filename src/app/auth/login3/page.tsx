@@ -6,8 +6,9 @@ import styles from "../../page.module.css";
 import { useFormik } from "formik";
 import { BsCheck } from "react-icons/bs";
 import { MdLock } from "react-icons/md";
+import { useRouter } from "next/navigation";
 const Login3 = () => {
-
+const route = useRouter()
   const toast = useToast();
   const validate = (values: any) => {
     const errors: any = {};
@@ -26,7 +27,9 @@ const Login3 = () => {
   const formik = useFormik({
     initialValues: { email: "", password: "" },
     validate,
-    onSubmit: async (values) => {},
+    onSubmit: async (values) => {
+      route.push('bullnet/dashboard')
+    },
   });
 
   return (

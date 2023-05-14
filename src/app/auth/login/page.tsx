@@ -45,7 +45,9 @@ const Login = () => {
   const formik = useFormik({
     initialValues: { email: "", password: "" },
     validate,
-    onSubmit: async (values) => {},
+    onSubmit: async (values) => {
+      route.push('bullnet/dashboard')
+    },
   });
 
   return (
@@ -179,7 +181,7 @@ const Login = () => {
                     <Text color={"#828282"}>
                       Dont have a wallet account?
                     </Text>
-                    <Text ml="4px" color={"#16780D"}>
+                    <Text ml="4px" cursor={'pointer'} onClick={() => {route.push('auth/signup')}} color={"#16780D"}>
                       {" "}
                       Sign up
                     </Text>

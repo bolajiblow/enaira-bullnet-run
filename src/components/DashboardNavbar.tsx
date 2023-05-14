@@ -24,7 +24,7 @@ const DashboardNavbar = () => {
   let [display, changeDisplay] = useState("none");
   return (
     <Flex
-      width="100%"
+      width="90%"
       justifyContent={["space-between", "space-between", "none", "none"]}
       bg="white"
       position="fixed"
@@ -32,27 +32,17 @@ const DashboardNavbar = () => {
       pb="10px"
       className="animate__animated animate__fadeInDown"
     >
-      <Box width="100%" display={["none", "none", "block", "block"]}>
-        <Box px={12}>
+      <Box width="93%" display={["none", "none", "block", "block"]}>
+        <Box px={4}>
           <Flex
             mt="10px"
-            mb={"10px"}
             height="45px"
             bg="#FFFFFF"
             direction="row"
             alignItems="center"
-            justifyContent="space-between"
+            justifyContent="flex-end"
           >
-            <Flex alignItems="center">
-              <Link as="span">
-                <Box>
-                  <Box height={["none", "none", "30px", "40px"]} ml="40px">
-                    <Image src={logo} alt="logo" />
-                  </Box>
-                </Box>
-              </Link>
-            </Flex>
-            <HStack
+            {/* <HStack
               spacing={["none", "none", "40px", "70px"]}
               color="#616161"
               fontSize={["none", "none", "12px", "14px"]}
@@ -86,18 +76,26 @@ const DashboardNavbar = () => {
                   <MenuItem>Help </MenuItem>
                 </MenuList>
               </Menu>
-            </HStack>
-            <HStack spacing={6} pr={10}>
-              <IconButton
-                variant="ghost"
-                aria-label="bell"
-                color="brand.2"
-                borderRadius={20}
-                icon={<BsBell />}
-              />
+           
+            </HStack> */}
+            <HStack spacing={2} >
+                <IconButton
+                  variant="ghost"
+                  aria-label="bell"
+                  borderRadius={"5px"}
+                  icon={<MdEmail />}
+                />
+                <IconButton
+                  variant="ghost"
+                  aria-label="bell"
+                  color="gray"
+                  borderRadius={"5px"}
+                  icon={<BsBell />}
+                />
 
-              <Avatar size="sm" name={`Joshua Ndukwe`} />
-            </HStack>
+                <Avatar size="sm" name={`Joshua Ndukwe`} />
+                <Text fontSize={'16px'} fontWeight={'500'}>Hi, Sammy</Text>
+              </HStack>
           </Flex>
         </Box>
       </Box>
