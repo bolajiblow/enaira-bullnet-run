@@ -34,7 +34,7 @@ const Sidebar = () => {
 
       <Flex direction="column" fontSize="16px" pt={8}>
         <HStack
-          mb={4}
+          mb={2}
           mx={"10px"}
           py={4}
           color={pathname == "/bullnet/dashboard" ? "#16780D" : "#9E9E9E"}
@@ -46,7 +46,7 @@ const Sidebar = () => {
           <Link href="/bullnet/dashboard">Dashboard</Link>
         </HStack>
         <HStack
-          mb={4}
+          mb={2}
           mx={"10px"}
           py={4}
           color={pathname == "/bullnet/user-profile" ? "#16780D" : "#9E9E9E"}
@@ -58,7 +58,7 @@ const Sidebar = () => {
           <Link href="/bullnet/user-profile">User profile</Link>
         </HStack>
         <HStack
-          mb={4}
+          mb={2}
           mx={"10px"}
           py={4}
           color={pathname == "/bullnet/fund-wallet" ? "#16780D" : "#9E9E9E"}
@@ -70,7 +70,7 @@ const Sidebar = () => {
           <Link href="/bullnet/fund-wallet">Fund wallet</Link>
         </HStack>
         <HStack
-          mb={4}
+          mb={2}
           mx={"10px"}
           py={4}
           color={pathname == "/bullnet/transfer-funds" ? "#16780D" : "#9E9E9E"}
@@ -81,9 +81,20 @@ const Sidebar = () => {
           <MdWorkOutline size={18} />
           <Link href="/bullnet/transfer-funds">Transfer funds</Link>
         </HStack>
-
         <HStack
-          mb={4}
+          mb={2}
+          mx={"10px"}
+          py={4}
+          color={pathname == "/bullnet/user-profile" ? "#16780D" : "#9E9E9E"}
+          boxShadow={pathname == "/bullnet/user-profile" ? "2px 2px 4px 1px rgba(0, 0, 0, 0.25)" : "none"}
+          alignItems="center"
+          pl={6}
+        >
+          <MdWorkOutline size={18} />
+          <Link href="/bullnet/user-profile">Vouchers</Link>
+        </HStack>
+        <HStack
+          mb={2}
           mx={"10px"}
           py={4}
           color={
